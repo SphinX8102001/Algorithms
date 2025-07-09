@@ -1,0 +1,67 @@
+Task:
+Given some pairs of student ID and mark, sort them by their marks in descending
+order and in case of tie sort them by ascending order of their ID. Also find
+the minimum number of swaps necessary to sort them in the mentioned way.
+
+Input:
+First line contains the number of tests. The description of each test follows.
+Each test is described by three lines. First line contains N, the number of
+pairs. Second line contains a list of distinct integers A[i] representing the
+student IDs. Third line contains another list of integers B[i] representing the
+marks. The pairs are (A[i], B[i]).
+
+Output:
+For each test in the given order, print the minimum number of necessary swaps
+in the first line and then the sorted pairs in N more lines. See sample output
+for more exact detail.
+
+Example-1 (batch-1):
+Input (stdin):
+1
+7
+7 4 9 3 2 5 1
+40 50 50 20 10 10 10
+Output (stdout):
+Minimum swaps: 4
+ID: 4 Mark: 50
+ID: 9 Mark: 50
+ID: 7 Mark: 40
+ID: 3 Mark: 20
+ID: 1 Mark: 10
+ID: 2 Mark: 10
+ID: 5 Mark: 10
+
+Example-2 (batch-2):
+Input (stdin):
+2
+4
+7 2 5 3
+80 60 80 50
+1
+1
+1
+Output (stdout):
+Minimum swaps: 2
+ID: 5 Mark: 80
+ID: 7 Mark: 80
+ID: 2 Mark: 60
+ID: 3 Mark: 50
+Minimum swaps: 0
+ID: 1 Mark: 1
+
+Scoring:
+Batch   Score   Tests   Constraints
+1       0.1     1       N=7, 1<=A[i]<=10, 1<=B[i]<=100
+2       0.1     2       1<=N<=5, 1<=A[i]<=10, 1<=B[i]<=100
+3       0.3     100     1<=N<=10, 1<=A[i]<=1000, 1<=B[i]<=1000
+4       0.3     100     1<=N<=100, 1<=A[i]<=1000, 1<=B[i]<=1000
+5       0.2     10      1<=N<=1000, 1<=A[i]<=1000, 1<=B[i]<=1000
+------------------------
+5       1       Total
+
+Time limit: 1s (cpp) or 2s (java) or 2s (py) per batch.
+
+Hints:
+- Use fast input/output methods.
+- 0.2 score for passing only sample batches.
+- O(N^2) solution is expected.
